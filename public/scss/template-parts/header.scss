@@ -1,0 +1,37 @@
+.header {
+  background-color: $light;
+  padding: fluid(20, 30) 0;
+  position: fluid;
+  z-index: 99;
+  width: 100%;
+  transition: 0.25s ease-in-out;
+}
+
+nav {
+  @include flex(space-between, center, wrap);
+  gap: fluid(20, 40);
+
+  .left,
+  .right {
+    display: flex;
+    gap: fluid(20, 40);
+  }
+
+  .logo {
+    @include flex(null, center, nowrap);
+    gap: rem(10);
+    text-transform: uppercase;
+    font-size: fluid(12, 14);
+
+    .symbol {
+      @include flex(center, center, center);
+      width: fluid(28, 30);
+      height: fluid(28, 30);
+      border: 2px solid $dark;
+      border-radius: 50%;
+      background-color: $orange;
+      color: $dark;
+      line-height: 1;
+    }
+  }
+}
