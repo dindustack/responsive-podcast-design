@@ -27,8 +27,8 @@ nav {
       @include flex(center, center, center);
       width: fluid(28, 30);
       height: fluid(28, 30);
+      border-radius: 10px 15px 10px 15px/15px 10px 15px 10px;
       border: 2px solid $dark;
-      border-radius: 50%;
       background-color: $orange;
       color: $dark;
       line-height: 1;
@@ -59,11 +59,17 @@ nav {
   .left {
     .main-menu {
       padding-left: fluid(20, 40);
+       @include media('<tablet') {
+        display: none;
+       }
     }
   }
 
   .right {
     .main-menu {
+       @include media('<phone-medium') {
+        display: none;
+       }
     }
   }
 
