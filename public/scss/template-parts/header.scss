@@ -33,5 +33,41 @@ nav {
       color: $dark;
       line-height: 1;
     }
+
+    .content {
+      font-weight: 500;
+    }
+  }
+
+  .main-menu {
+    @include flex(space-between, center, wrap);
+    gap: fluid(20, 80);
+
+    .menu-item {
+      a {
+        text-transform: uppercase;
+        font-size: fluid(10, 13);
+
+        &:hover {
+          text-underline-offset: rem(3);
+          text-decoration: underline solid $green rem(4);
+          color: $dark;
+        }
+      }
+    }
+  }
+  .left {
+    .main-menu {
+      padding-left: fluid(20, 40);
+    }
+  }
+
+  .right {
+    .main-menu {
+    }
+  }
+
+  .hamburger {
+    display: none;
   }
 }
