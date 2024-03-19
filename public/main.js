@@ -1,6 +1,6 @@
 import "./scss/main.scss";
 
-import { mobileMenu } from "./js/mobile-menu.js";
+import { mobileMenu } from "./js/mobile-menu";
 
 document.addEventListener("DOMContentLoaded", function () {
   mobileMenu();

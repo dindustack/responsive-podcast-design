@@ -1,7 +1,7 @@
 .header {
   background-color: $light;
   padding: fluid(20, 30) 0;
-  position: fluid;
+  position: relative;
   z-index: 99;
   width: 100%;
   transition: 0.25s ease-in-out;
@@ -81,6 +81,52 @@
         border-radius: rem(5);
         background-color: $orange;
       }
+    }
+  }
+
+  .mobile-menu {
+    position: absolute;
+    z-index: 9;
+    width: 100%;
+    height: calc(100vh - 100%);
+    top: calc(100% - 1px);
+    display: none;
+    transform: translateX(1200px);
+    transition: 0.5s ease-in-out;
+    overflow: auto;
+
+    @include media("<tablet") {
+      display: block;
+    }
+
+    .wrapper {
+      overflow-y: auto;
+    }
+
+    &-items {
+      padding-top: rem(40);
+      text-align: center;
+
+      .menu-item {
+        margin-bottom: rem(20);
+        a {
+          display: block;
+          text-transform: capitalize;
+          font-size: rem(22);
+
+          @include media("<phone-medium") {
+            font-size: rem(16);
+          }
+        }
+      }
+    }
+
+    .auth-links {
+      margin-top: rem(40);
+    }
+
+    &.active {
+      transform: translateX(0);
     }
   }
 }
