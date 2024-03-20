@@ -9,6 +9,7 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cleva Podcast | Fresh insights to listen anywhere</title>
+    <script src="https://unpkg.com/wavesurfer.js@7"></script>
   </head>
   <body>
     <header class="header">
@@ -65,15 +66,42 @@
             <button class="btn play">
               <ion-icon src="/public/assets/icons/play.svg"></ion-icon>
             </button>
-            <div class="range">
-              <input type="range" value="50" min="0" max="100" id="range" />
+            <div class="audio-player">
+              <div id="waveform"></div>
               <div class="timestamp">
-                <span class="current timestamp">00:32</span>
-                <span class="total timestamp">34:45</span>
+                <span class="current timestamp">00:00</span>
+                <span class="total timestamp">58:25</span>
               </div>
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="padast">
+      <div class="wrapper medium">
+        <div class="podcast-poster">
+          <figure class="image">
+            <img src="/public/assets/img/portrait.jpg" alt="podcast-poster" />
+          </figure>
+        </div>
+        <div class="author-info">
+          <figure class="avatar">
+            <img src="/public/assets/img/avatar.jpg" alt="avatar" />
+          </figure>
+          <div class="grp">
+            <h4>About the Host</h4>
+            <p>
+              Meet Jotham, your friendly neighborhood tech enthusiast and the
+              charismatic voice behind your favorite podcast, "Tech Talk with
+              Jotham." With a knack for breaking down complex concepts into
+              digestible bytes, Jotham navigates the ever-evolving landscape of
+              technology with wit, humor, and genuine curiosity.
+            </p>
+          </div>
+        </div>
+        <div class="podcast-contents"></div>
+        <div class="podcast-details"></div>
       </div>
     </section>
 
@@ -86,5 +114,17 @@
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
     <script type="module" src="./public/main.js"></script>
+    <script>
+      const wavesurfer = WaveSurfer.create({
+        container: "#waveform",
+        waveColor: "#DDD",
+        progressColor: "#7EBA94",
+        barWidth: 4,
+        responsive: true,
+        height: 50,
+        barRadius: 4,
+        url: "./public/assets/Better-Day.mp3",
+      });
+    </script>
   </body>
 </html>

@@ -43,4 +43,64 @@
       mix-blend-mode: difference;
     }
   }
+
+  .wrapper {
+    position: relative;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 0.2fr 0.8fr;
+    gap: fluid(20, 60);
+
+    @include media("<tablet") {
+      grid-template-columns: 0.3fr 0.7fr;
+    }
+  }
+
+  .player-container {
+    grid-column: 2;
+    position: relative;
+    @include flex(null, flex-end, null);
+    z-index: 9;
+
+    @include media("<phone-medium") {
+      display: none;
+    }
+
+    .player {
+      padding: fluid(10, 10);
+      margin-bottom: rem(10);
+      width: 100%;
+      // background: $light;
+      // border-radius: 10px 15px 10px 15px/15px 10px 15px 10px;
+      // border: 2px solid $dark;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: center;
+      gap: fluid(10, 20);
+
+      .play {
+        height: fluid(40, 60);
+        width: fluid(40, 60);
+        border-radius: 50%;
+        border: 2px solid $dark;
+        background-color: $orange;
+        @include flex(center, center, null);
+
+        ion-icon {
+          color: $dark;
+          font-size: fluid(18, 22);
+        }
+      }
+
+      .audio-player {
+        width: inherit;
+
+        .timestamp {
+          @include flex(space-between, flex-start, wrap);
+          color: $light;
+          font-size: fluid(12, 14);
+        }
+      }
+    }
+  }
 }
