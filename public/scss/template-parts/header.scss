@@ -6,6 +6,10 @@
   width: 100%;
   transition: 0.25s ease-in-out;
 
+  @include media("<phone-medium") {
+    background-color: transparent;
+  }
+
   nav {
     @include flex(space-between, center, wrap);
     gap: fluid(20, 40);
@@ -91,13 +95,8 @@
     height: calc(100vh - 100%);
     top: calc(100% - 1px);
     display: none;
-    transform: translateX(1200px);
     transition: 0.5s ease-in-out;
     overflow: auto;
-
-    @include media("<tablet") {
-      display: block;
-    }
 
     .wrapper {
       overflow-y: auto;
@@ -146,7 +145,13 @@
     }
 
     &.active {
-      transform: translateX(0);
+      display: block;
+    }
+  }
+
+  &.mobile-menu-active {
+    @include media("<phone-medium") {
+      background-color: $light;
     }
   }
 }
