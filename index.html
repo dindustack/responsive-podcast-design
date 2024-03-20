@@ -78,13 +78,14 @@
       </div>
     </section>
 
-    <section class="padast">
+    <section class="podcast">
       <div class="wrapper medium">
         <div class="podcast-poster">
           <figure class="image">
             <img src="/public/assets/img/portrait.jpg" alt="podcast-poster" />
           </figure>
         </div>
+
         <div class="author-info">
           <figure class="avatar">
             <img src="/public/assets/img/avatar.jpg" alt="avatar" />
@@ -100,7 +101,91 @@
             </p>
           </div>
         </div>
-        <div class="podcast-contents"></div>
+
+        <div class="podcast-contents">
+          <div class="heading">
+            <h3 class="author">Zimchi Akudoh</h3>
+            <blockquote class="quote">Find the digital realm.</blockquote>
+          </div>
+       
+
+        <!-- show transcript in larger screens -->
+        <div class="content">
+          <div class="tab-header">
+            <button class="tab-title" data-title="about">about the podcast</button>
+            <button class="tab-title active" data-title="transcript">transcript</button>
+          </div>
+
+          <div class="tab-contents">
+            <!-- About -->
+            <div class="tab-content" data-title="about">
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni
+                aut, voluptatibus odio numquam aperiam harum enim autem sapiente
+                officiis nisi provident perferendis beatae molestias delectus
+                nesciunt esse mollitia. Aut, praesentium.
+              </p>
+            </div>
+
+            <!-- Transcript -->
+            <div class="tab-content active" data-title="transcript">
+              <p class="intro">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni
+                aut, voluptatibus odio numquam aperiam harum enim autem sapiente
+                officiis nisi provident perferendis beatae molestias delectus
+                nesciunt esse mollitia. Aut, praesentium.
+              </p>
+
+              <div class="transcript">
+                <p class="host">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id,
+                  labore voluptatibus! Minima a maxime accusantium laudantium
+                  quo mollitia ab quas perspiciatis, ratione ex eius eos ullam
+                  cum quibusdam nesciunt delectus!
+                </p>
+
+                <p class="guest">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id,
+                  labore voluptatibus! Minima a maxime accusantium laudantium
+                  quo mollitia ab quas perspiciatis, ratione ex eius eos ullam
+                  cum quibusdam nesciunt delectus!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Show for smaller screen (<phone-medium) -->
+        <div id="player" class="player">
+          <div class="audio-player">
+            <div id="waveform"></div>
+            <div class="timestamp">
+              <span class="current timestamp">00:00</span>
+              <span class="total timestamp">58:25</span>
+            </div>
+          </div>
+
+          <div class="controls">
+            <!-- Previous -->
+            <button class="btn prev">
+              <ion-icon
+                src="/public/assets/icons/play-skip-back.svg"
+              ></ion-icon>
+            </button>
+
+            <!-- Play -->
+            <button class="btn play">
+              <ion-icon src="/public/assets/icons/play.svg"></ion-icon>
+            </button>
+
+            <!-- Next -->
+            <button class="btn next">
+              <ion-icon
+                src="/public/assets/icons/play-skip-forward.svg"
+              ></ion-icon>
+            </button>
+          </div>
+        </div>
         <div class="podcast-details"></div>
       </div>
     </section>
