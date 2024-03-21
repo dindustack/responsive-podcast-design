@@ -63,14 +63,14 @@
       <div class="wrapper medium">
         <div class="player-container">
           <div id="player" class="player">
-            <button class="btn play">
+            <button class="btn play" id="playBtn">
               <ion-icon src="/public/assets/icons/play.svg"></ion-icon>
             </button>
             <div class="audio-player">
               <div id="waveform"></div>
               <div class="timestamp">
-                <span class="current timestamp">00:00</span>
-                <span class="total timestamp">58:25</span>
+                <span class="current timestamp" id="time-current">00:00</span>
+                <span class="total timestamp" id="time-total">00:00</span>
               </div>
             </div>
           </div>
@@ -159,10 +159,7 @@
           <div id="player" class="player">
             <div class="audio-player-mobile">
               <div id="waveform"></div>
-              <div class="timestamp">
-                <span class="current timestamp">00:00</span>
-                <span class="total timestamp">58:25</span>
-              </div>
+              
             </div>
 
             <div class="controls">
@@ -237,18 +234,6 @@
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
     <script type="module" src="./public/main.js"></script>
-    <script>
-      const wavesurfer = WaveSurfer.create({
-        container: "#waveform",
-        waveColor: "#DDD",
-        progressColor: "#7EBA94",
-        barWidth: 4,
-        responsive: true,
-        height: 50,
-        barRadius: 4,
-        url: "./public/assets/Better-Day.mp3",
-      });
-
-    </script>
+    <script type="module" src="./public/js/audio-wave.js"></script>
   </body>
 </html>
