@@ -109,84 +109,122 @@
           </div>
        
 
-        <!-- show transcript in larger screens -->
-        <div class="content">
-          <div class="tab-header">
-            <button class="tab-title" data-title="about">about the podcast</button>
-            <button class="tab-title active" data-title="transcript">transcript</button>
-          </div>
-
-          <div class="tab-contents">
-            <!-- About -->
-            <div class="tab-content" data-title="about">
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni
-                aut, voluptatibus odio numquam aperiam harum enim autem sapiente
-                officiis nisi provident perferendis beatae molestias delectus
-                nesciunt esse mollitia. Aut, praesentium.
-              </p>
+          <!-- show transcript in larger screens -->
+          <div class="content">
+            <div class="tab-header">
+              <button class="tab-title" data-title="about">about the podcast</button>
+              <button class="tab-title active" data-title="transcript">transcript</button>
             </div>
 
-            <!-- Transcript -->
-            <div class="tab-content active" data-title="transcript">
-              <p class="intro">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni
-                aut, voluptatibus odio numquam aperiam harum enim autem sapiente
-                officiis nisi provident perferendis beatae molestias delectus
-                nesciunt esse mollitia. Aut, praesentium.
-              </p>
+            <div class="tab-contents">
+              <!-- About -->
+              <div class="tab-content" data-title="about">
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni
+                  aut, voluptatibus odio numquam aperiam harum enim autem sapiente
+                  officiis nisi provident perferendis beatae molestias delectus
+                  nesciunt esse mollitia. Aut, praesentium.
+                </p>
+              </div>
 
-              <div class="transcript">
-                <p class="host">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id,
-                  labore voluptatibus! Minima a maxime accusantium laudantium
-                  quo mollitia ab quas perspiciatis, ratione ex eius eos ullam
-                  cum quibusdam nesciunt delectus!
+              <!-- Transcript -->
+              <div class="tab-content active" data-title="transcript">
+                <p class="intro">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni
+                  aut, voluptatibus odio numquam aperiam harum enim autem sapiente
+                  officiis nisi provident perferendis beatae molestias delectus
+                  nesciunt esse mollitia. Aut, praesentium.
                 </p>
 
-                <p class="guest">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id,
-                  labore voluptatibus! Minima a maxime accusantium laudantium
-                  quo mollitia ab quas perspiciatis, ratione ex eius eos ullam
-                  cum quibusdam nesciunt delectus!
-                </p>
+                <div class="transcript">
+                  <p class="host">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id,
+                    labore voluptatibus! Minima a maxime accusantium laudantium
+                    quo mollitia ab quas perspiciatis, ratione ex eius eos ullam
+                    cum quibusdam nesciunt delectus!
+                  </p>
+
+                  <p class="guest">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id,
+                    labore voluptatibus! Minima a maxime accusantium laudantium
+                    quo mollitia ab quas perspiciatis, ratione ex eius eos ullam
+                    cum quibusdam nesciunt delectus!
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- Show for smaller screen (<phone-medium) -->
-        <div id="player" class="player">
-          <div class="audio-player">
-            <div id="waveform"></div>
-            <div class="timestamp">
-              <span class="current timestamp">00:00</span>
-              <span class="total timestamp">58:25</span>
+          <!-- Show for smaller screen (<phone-medium) -->
+          <div id="player" class="player">
+            <div class="audio-player-mobile">
+              <div id="waveform"></div>
+              <div class="timestamp">
+                <span class="current timestamp">00:00</span>
+                <span class="total timestamp">58:25</span>
+              </div>
+            </div>
+
+            <div class="controls">
+              <!-- Previous -->
+              <button class="btn prev">
+                <ion-icon
+                  src="/public/assets/icons/play-skip-back.svg"
+                ></ion-icon>
+              </button>
+
+              <!-- Play -->
+              <button class="btn play">
+                <ion-icon src="/public/assets/icons/play.svg"></ion-icon>
+              </button>
+
+              <!-- Next -->
+              <button class="btn next">
+                <ion-icon
+                  src="/public/assets/icons/play-skip-forward.svg"
+                ></ion-icon>
+              </button>
             </div>
           </div>
+        </div>
 
-          <div class="controls">
-            <!-- Previous -->
-            <button class="btn prev">
-              <ion-icon
-                src="/public/assets/icons/play-skip-back.svg"
-              ></ion-icon>
-            </button>
 
-            <!-- Play -->
-            <button class="btn play">
-              <ion-icon src="/public/assets/icons/play.svg"></ion-icon>
-            </button>
-
-            <!-- Next -->
-            <button class="btn next">
-              <ion-icon
-                src="/public/assets/icons/play-skip-forward.svg"
-              ></ion-icon>
-            </button>
+        <!-- Podcast details -->
+        <div class="podcast-details">
+          <div class="social-share">
+          <span class="title">share episode</span>
+          <div class="socials">
+            <a href="https://dindustack.com" target="_blank" rel="noopener noreferrer" class="share-btn"><ion-icon src="/public/assets/icons/icons8-facebook.svg"></ion-icon></a>
+            <a href="https://twitter.com/dindustack" target="_blank" rel="noopener noreferrer" class="share-btn"><ion-icon src="/public/assets/icons/icons8-twitter.svg"></ion-icon></a>
+            <a href="https://linkedin.com/in/dindustack" target="_blank" rel="noopener noreferrer" class="share-btn"><ion-icon src="/public/assets/icons/icons8-linkedin.svg"></ion-icon></a>
           </div>
         </div>
-        <div class="podcast-details"></div>
+        <ul class="podcast-infos">
+          <li class="item">
+            <span class="key">guest</span>
+            <span class="value">Zimchi Akudoh</span>
+          </li>
+
+          <li class="item">
+            <span class="key">host</span>
+            <span class="value">Jotham Bradley</span>
+          </li>
+
+          <li class="item">
+            <span class="key">duration</span>
+            <span class="value">58 min 04sec</span>
+          </li>
+
+          <li class="item">
+            <span class="key">category</span>
+            <span class="value">Tech</span>
+          </li>
+
+          <li class="item">
+            <span class="key">Release date</span>
+            <span class="value">Jan 16, 2024</span>
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -210,6 +248,7 @@
         barRadius: 4,
         url: "./public/assets/Better-Day.mp3",
       });
+
     </script>
   </body>
 </html>

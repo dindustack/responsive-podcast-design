@@ -70,9 +70,6 @@
       padding: fluid(10, 10);
       margin-bottom: rem(10);
       width: 100%;
-      // background: $light;
-      // border-radius: 10px 15px 10px 15px/15px 10px 15px 10px;
-      // border: 2px solid $dark;
       display: grid;
       grid-template-columns: auto 1fr;
       align-items: center;
@@ -94,6 +91,21 @@
 
       .audio-player {
         width: inherit;
+
+        @include media("<phone-medium") {
+          display: none;
+        }
+
+        .timestamp {
+          @include flex(space-between, flex-start, wrap);
+          color: $light;
+          font-size: fluid(12, 14);
+        }
+      }
+
+      .audio-player-mobile {
+        width: inherit;
+
 
         .timestamp {
           @include flex(space-between, flex-start, wrap);
