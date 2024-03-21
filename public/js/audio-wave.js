@@ -6,7 +6,7 @@ function str_pad_left(string, pad, length) {
 
 function convertSecondsToMinSec(seconds) {
   const mins = Math.floor(seconds / 60);
-  const secs = mins % 60;
+  const secs = seconds - (mins % 60);
 
   const finalTime =
     str_pad_left(mins, "0", 2) + ":" + str_pad_left(secs, "0", 2);
